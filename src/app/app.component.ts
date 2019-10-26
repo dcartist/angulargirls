@@ -17,10 +17,15 @@ import { Component } from '@angular/core';
     </li>
   </ul>
 
-
+<!--
   <ul>
   <li *ngFor="let todoItem of todoList">
     <app-todo-item></app-todo-item>
+  </li>
+</ul>-->
+<ul>
+  <li *ngFor="let todoItem of todoList">
+    <app-todo-item [item]="todoItem"></app-todo-item>
   </li>
 </ul>
 `,
