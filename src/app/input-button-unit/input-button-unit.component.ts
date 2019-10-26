@@ -1,42 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+// import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+
 
 @Component({
   selector: 'app-input-button-unit',
   //Make sure to have backticks for this template
   template: `
-  <p> This is the update for the information</p>
-  <!-- Need to read up on #ElementRef-->
   <input #inputElementRef
   [value]="title"
-  (keyup.enter)="changeTitle(inputElementRef)">
+  (keyup.enter)="submitValue($event.target.value)">
 
-<button (click)="changeTitle(inputElementRef)">
+<button (click)="submitValue(inputElementRef.value)">
 Save
 </button>
-
-
-  <hr>
-
-  <p>
-    input-button-unit works!
-    this is the title {{title}}
-    </p>
   `,
   styleUrls: ['./input-button-unit.component.css']
+
 })
 export class InputButtonUnitComponent implements OnInit {
+  @Output() submit: EventEmitter<string> = new EventEmitter();
   title = 'Hello World, BAD ASS';
   constructor() {
     this.title = 'I Love Angular, actually I love programming.';
 //Methods are outside of constructor still
   }
 
-  changeTitle(inputElementReference) {
-    console.log(inputElementReference);
-    this.title = inputElementReference.value;
+  // changeTitle(inputElementReference) {
+  //   console.log(inputElementReference);
+  //   this.title = inputElementReference.value;
+  // }
+
+  changeTitle(newTitle: string) {
+    this.submit.emit(newTitle);
   }
 
-
+  submitValue(newTitle: string) {
+    this.submit.emit(newTitle);
+  }
 
 
 
