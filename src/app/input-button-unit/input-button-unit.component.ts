@@ -4,14 +4,13 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-input-button-unit',
   //Make sure to have backticks for this template
   template: `
-
-  s
   <p> This is the update for the information</p>
+  <!-- Need to read up on #ElementRef-->
   <input #inputElementRef
   [value]="title"
-  (keyup.enter)="changeTitle1($event.target.value)">
+  (keyup.enter)="changeTitle($event.target.value)">
 
-<button (click)="changeTitle1(inputElementRef.value)">
+<button (click)="changeTitle(inputElementRef.value)">
 Save
 </button>
 
@@ -23,7 +22,10 @@ Save
     this is the title {{title}}
     </p>
     <!-- <input value="Hello Coffee!"> -->
-    <input [value]="title"> <!-- this puts the title inside of the input -->
+    <!-- <input [value]="title"> -->
+    <!-- this puts the title inside of the input -->
+
+    <!--
     <hr>
     <input [value]="generateTitle()">
 
@@ -33,16 +35,18 @@ Save
 
 
 <input [value]="title">
+-->
 <!-- instead of onClick it's just click then then method is called -->
-<button (click)="changeTitle('I have been clicked!')">
+<!-- <button (click)="changeTitle('I have been clicked!')">
   Save
 </button>
 
 <hr>
 <input [value]="title" (keyup)="changeTitle('HAHAHAHAH!')">
-<hr>
+<hr> -->
 <!-- This is taking the event target and using it for the change Title -->
 <!-- Instead of keyup instead of onchange  -->
+<!--
 <p> Changes the input based on the key up:</p>
 <input [value]="title"
        (keyup)="changeTitle($event.target.value)">
@@ -55,7 +59,7 @@ Save
 <p></p>
 <input [value]="title"
        (keyup.enter)="changeTitle1($event)">
-
+-->
   `,
   styleUrls: ['./input-button-unit.component.css']
 })
@@ -66,17 +70,23 @@ export class InputButtonUnitComponent implements OnInit {
 //Methods are outside of constructor still
   }
 
-  changeTitle(newTitle: string) {
-    console.log(newTitle);
-    this.title = newTitle;
-    console.log(newTitle);
-
+  changeTitle(inputElementReference) {
+    console.log(inputElementReference);
+    this.title = inputElementReference.value;
   }
 
-  changeTitle1(event): void {
-    console.log(event);
-    this.title = event.target.value; // the original functionality still works
-  }
+
+  // changeTitle(newTitle: string) {
+  //   console.log(newTitle);
+  //   this.title = newTitle;
+  //   console.log(newTitle);
+
+  // }
+
+  // changeTitle1(event): void {
+  //   console.log(event);
+  //   this.title = event.target.value; // the original functionality still works
+  // }
 
 
 
