@@ -11,7 +11,7 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
   (keyup.enter)="submitValue($event.target.value)">
 
 <button (click)="submitValue(inputElementRef.value)">
-Save
+Save WTF
 </button>
   `,
   styleUrls: ['./input-button-unit.component.css']

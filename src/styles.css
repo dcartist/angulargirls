@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Permanent+Marker&display=swap');
+
 html, body, div, span,
 h1, p, ul, li {
   padding: 0;
@@ -17,6 +19,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+input {
+  font-size: 14px;
+  height: 25px;
+  margin-right: 10px;
+  width: 350px;
+}
+
+button {
+height: 50px;
+font-size: 14px;
+width: 100px;
+
 }
 
 ol, ul {
@@ -58,5 +73,12 @@ ol, ul {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-family: 'Permanent Marker', cursive;
 }
+
+
+
+/* font-family: 'Permanent Marker', cursive;
+font-family: 'Concert One', cursive; */
