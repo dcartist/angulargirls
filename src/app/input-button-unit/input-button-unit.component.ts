@@ -4,7 +4,21 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-input-button-unit',
   //Make sure to have backticks for this template
   template: `
-    <p>
+
+  s
+  <p> This is the update for the information</p>
+  <input #inputElementRef
+  [value]="title"
+  (keyup.enter)="changeTitle1($event.target.value)">
+
+<button (click)="changeTitle1(inputElementRef.value)">
+Save
+</button>
+
+
+  <hr>
+
+  <p>
       input-button-unit works!
     this is the title {{title}}
     </p>
@@ -16,10 +30,7 @@ import { Component, OnInit } from '@angular/core';
     {{ generateTitle() }}
     <button>Save</button>
   <hr>
-  <p>
-  input-button-unit works!
-  The title is: {{ title }}
-</p>
+
 
 <input [value]="title">
 <!-- instead of onClick it's just click then then method is called -->
