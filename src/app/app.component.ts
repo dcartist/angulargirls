@@ -16,6 +16,13 @@ import { Component } from '@angular/core';
       {{ todoItem.title }}
     </li>
   </ul>
+
+
+  <ul>
+  <li *ngFor="let todoItem of todoList">
+    <app-todo-item></app-todo-item>
+  </li>
+</ul>
 `,
   styleUrls: ['./app.component.css']
 })
