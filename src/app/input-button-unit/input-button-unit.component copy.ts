@@ -49,7 +49,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input-button-unit.component.css']
 })
 export class InputButtonUnitComponent implements OnInit {
-  title = 'Hello World, BAD ASS';
+  title = 'Hello World, Programing is AWESOME';
   constructor() {
     this.title = 'I Love Angular, actually I love programming.';
 //Methods are outside of constructor still

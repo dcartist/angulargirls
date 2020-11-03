@@ -13,5 +13,5 @@ import { TodoItem } from './interfaces/todo-item';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'My To Do List WTF APP';
+  title = 'My To Do List WTH APP';
 }

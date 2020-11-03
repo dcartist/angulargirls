@@ -6,7 +6,7 @@ import { TodoItem } from '../interfaces/todo-item';
   selector: 'app-todo-item',
   template: `
     <p>
-    WTF
+    WTH
     </p>
   `,
   styleUrls: ['./todo-item.component.css']
