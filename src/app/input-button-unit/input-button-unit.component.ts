@@ -11,7 +11,7 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
   (keyup.enter)="submitValue($event.target.value)">
 
 <button (click)="submitValue(inputElementRef.value)">
-Save
+Save WTF
 </button>
   `,
   styleUrls: ['./input-button-unit.component.css']
@@ -50,7 +50,18 @@ export class InputButtonUnitComponent implements OnInit {
     setTimeout(() => {
       this.title = 'This is not the title you are looking for';
     }, 3000);
-
+    setTimeout(() => {
+      this.title = 'Yep it changed again';
+    }, 6000);
+    setTimeout(() => {
+      this.title = 'and changed again';
+    }, 9000);
+    setTimeout(() => {
+      this.title = 'Sorry Continue';
+    }, 12000);
+    setTimeout(() => {
+      this.title = '....';
+    }, 15000);
     // Methods >> this.changeTitle is implemented here from building in the constructor earlier
 
   }
